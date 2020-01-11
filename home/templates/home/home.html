@@ -1,0 +1,70 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/home/css/home.css">
+</head>
+<div class="greeting">
+    <div class="g-main">
+        <div class="g-headshot">
+            <img class="g-headshot-image" src="{{ info.avatar.url }}" alt="Evan in the sunset">
+        </div>
+        <div class="g-name">
+            <h1> {{info.name }} </h1>
+        </div>
+        <div class="g-pitch">
+            <p>
+                Hello, I am Evan and I have a passion for learning.
+            </p>
+        </div>
+        <a class="g-contact" href="mailto:empatte2@ncsu.edu">
+            Contact
+        </a>
+    </div>
+</div>
+<div class="credentials">
+    <div class="c-bio">
+        <div class="c-bio-intro">
+            <h1 class="c-bio-intro-p">AN INTRO</h1>
+        </div>
+        <div class="c-bio-txt">
+            <p class="c-bio-txt-p"> {{ info.bio }}</p>
+        </div>
+    </div>
+    <div class="c-experience">
+        <div class="c-e-header">
+            <h1 class="c-e-header-txt">EXPERIENCE</h1>
+        </div>
+        <div class="c-e-jobcontainer">
+            {% for job in experience %}
+                <div class="c-e-job">
+                    <h1 class="c-e-j-title">{{ job.title }}</h1>
+                    <div class="c-e-j-infoline">
+                        <h1 class="c-e-j-company">{{ job.company }}</h1>
+                        {% if job.present == True %}
+                            <h3 class="c-e-j-timeline">{{ job.start_year }} - Present</h3>
+                        {% else %}
+                            <h3 class="c-e-j-timeline">{{ job.start_year }} - {{ job.end_year }}</h3>
+                        {% endif %}
+                    </div>
+                    <div class="c-e-j-desc">
+                        <p>{{ job.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- I want a home, portfolio/projects, resume, about, contact, and blog page
+these are the end goals of my Web Page
+
+need to create a block header with hot links to all of these
+
+start with general 'home' page for now, a mix of most of these, will be changed
+it should not be scrollable, super simple for now, all on one page-->
+

@@ -1,0 +1,374 @@
+/*-------------------HOME STYLESHEET-----------------*/
+{% load static %}
+
+/* =================Color Schemes====================*/
+/*S P A C E
+/*---dark blue                             #1c253c---*/
+/*---muted blue                            #1f3e5a---*/
+/*---muted green                           #145051---*/
+/*---muted dark purple                     #281c3c---*/
+/*---maroon                                #3c1c31---*/
+/*Space Race blue to orange
+/*---bb                              	   #356b79---*/
+/*---b                                     #586264---*/
+/*---bo                                    #7c584f---*/
+/*---o                                     #a04539---*/
+/*---oo                                    #c44524---*/
+/*===================================================*/
+:root{
+    --main-color: #1c1e3c;
+    --acnt-color: #ffdbc7;
+
+}
+
+/*----------------------Overall---------------------*/
+*{
+
+}
+
+h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--main-txt-color);
+    font-size: 35px;
+    background-color: var(--main-color);
+}
+
+h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--main-txt-color);
+    background-color: var(--main-color);
+    font-size: 20px;
+}
+
+h3{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--main-txt-color);
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--main-color);
+}
+
+p{
+    font-family: 'Source Serif Pro', serif;
+    color: var(--main-txt-color);
+    font-size: 15px;
+    margin: 0;
+    word-wrap: break-word;
+    background-color: var(--main-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    background-color: var(--main-color);
+}
+
+/*-------------Greetings Side----------------------*/
+.greeting{
+    width: 40%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    left: 0;
+    top:0;
+    margin: auto
+
+    display: inline-block;
+    background-color: var(--main-color);
+    /*background-image: url('../assets/ILMOverlay.png');
+    background-size: auto 125%;*/
+}
+
+.g-main *{
+    color: var(--acnt-color);
+    vertical-align: middle;
+}
+.g-headshot{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
+    box-shadow: 0 5px 10px black;
+    /* Screen size specific */
+    margin: 20% auto auto auto;
+    /*transform: translateY(-60%); /*Figure out what this does? */
+}
+
+.g-headshot-image{
+    display: block;
+    border-radius: 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.g-name{
+    background-color: var(--main-color);
+    max-width: 550px;
+    padding: 0 40px;
+    display: block;
+    margin: 10px auto auto auto;
+    text-align: center;
+}
+
+.g-name h1{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.g-pitch{
+    background-color: var(--main-color);
+    max-width: 550px;
+    padding: 0 40px;
+    display: block;
+    margin: 10px auto auto auto;
+    text-align: center;
+}
+
+.g-pitch p{
+    font-size: 20px;
+    padding: 0px 40px 0px 40px;
+}
+a{
+    transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+}
+.g-contact{
+    /* container styling */
+    background-color: var(--main-color);
+    border: solid var(--acnt-color) 2px;
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+
+    /* Interior Positioning */
+    padding: 11px 24px;
+
+    /* Screen Positioning */
+    margin: 40px auto auto auto;
+    display: block;
+    position: relative;
+    text-align: center;
+
+    /* Text Styling */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--acnt-color);
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.g-contact::after, .g-contact:hover{
+    background-color: var(--acnt-color);
+    border: solid var(--acnt-color) 2px;
+    color: var(--main-color);
+}
+
+
+
+
+/*-------------Credentials Side----------------------*/
+.credentials{
+    display: inline-block;
+    position: static;
+    float: right;
+    width: 60%;
+    height: 100%;
+    background-color: var(--acnt-color);
+    overflow: auto;
+
+}
+.credentials *{
+    background-color: var(--acnt-color);
+    margin: auto;
+    color: var(--main-color);
+}
+
+
+
+
+.c-bio{
+    display: inline-block;
+    background-color: var(--acnt-color);
+    color: var(--main-txt-color);
+    width: 100%;
+    margin: 5% auto 5% auto;
+}
+
+.c-bio-intro{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 15%;;
+}
+
+.c-bio-intro-p{
+    font-size: 12px;
+    text-align: center;
+}
+
+.c-bio-txt{
+    display: inline-block;
+    float: right;
+    width: 70%;
+    margin-right: 10%;
+
+}
+
+.c-bio-txt-p{
+    display: block;
+    font-size: 1.2em;
+}
+
+.c-experience{
+    display: block;
+    margin: 40px auto auto auto;
+    min-height: 600px;
+}
+
+.c-e-header{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 15%;
+}
+.c-e-header-txt{
+    font-size: 12px;
+    text-align: center;
+}
+.c-e-jobcontainer{
+    display: inline-block;
+    float: right;
+    width: 80%;
+    margin-right: 20px;
+}
+.c-e-job{
+    min-height: 150px;
+    display: block;
+    margin: auto auto auto auto;
+}
+.c-e-j-infoline {
+    display: block;
+    min-height: 25px;
+    margin: auto;
+    margin-top: 5px;
+    margin-right: 10%;
+}
+.c-e-j-title{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.c-e-j-company{
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    padding-left:10px;
+}
+.c-e-j-timeline{
+    display: inline-block;
+    float: right;
+    text-align: center;
+    font-size: 18px;
+}
+.c-e-j-desc{
+    display: block;
+    padding: 2% 10% 8% 25px;
+    /*text-indent: -5px'*/
+}
+
+.c-e-j-desc p{
+    font-size: 1.2em;
+}
+
+
+@media screen and (max-width: 1040px) {
+        .c-e-header{
+        display: block;
+        float: left;
+        text-align: center;
+        padding: 20px;
+    }
+    .c-e-jobcontainer{
+        display: block;
+        float: right;
+        width: 90%;
+        margin-right: 20px;
+    }
+    .c-bio-intro{
+        display: block;
+        float: left;
+        text-align: center;
+        padding: 20px;
+    }
+    .c-bio-txt{
+        display: block;
+        float: right;
+        width: 80%;
+        margin-right: 10%;
+
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    *{
+        float: none;
+        background-color: var(--acnt-color);
+    }
+
+    .greeting{
+        width: 100%;
+        min-height: 767px;
+        position: relative;
+    }
+
+    .credentials{
+        width: 100%;
+        height: 100%;
+        display: block;
+        min-height: auto;
+        position: relative;
+        overflow: visible;
+    }
+    .c-e-header{
+        display: block;
+        float: left;
+        text-align: center;
+        padding: 20px;
+    }
+    .c-e-jobcontainer{
+        display: block;
+        float: right;
+        width: 100%;
+        margin: 0px;
+        padding-left: 5px;
+    }
+    .c-e-job{
+        float: right;
+
+    }
+    .c-e-j-title{
+        padding-left: 5px;
+    }
+    .c-e-j-infoline{
+        margin:5px 5px 0px 0px;
+    }
+    .c-bio-intro{
+        display: block;
+        float: left;
+        text-align: center;
+        padding: 20px;
+    }
+    .c-bio-txt{
+        display: block;
+        float: right;
+        width: 80%;
+        margin-right: 10%;
+
+    }
+}
